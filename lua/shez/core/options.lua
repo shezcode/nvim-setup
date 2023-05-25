@@ -5,10 +5,12 @@ opt.relativenumber = true
 opt.number = true
 
 --tabs & indent
-opt.tabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 4
+opt.softtabstop = 4
+opt.shiftwidth = 4
 opt.expandtab = true
-opt.autoindent = true
+
+opt.smartindent = true
 
 --line wrapping
 opt.wrap = false
@@ -19,6 +21,8 @@ opt.smartcase = true
 
 --cursor line
 opt.cursorline = true
+
+opt.termguicolors = true
 
 
 --backspace
@@ -32,3 +36,7 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
+
+opt.hlsearch = false
+opt.incsearch = true
+
