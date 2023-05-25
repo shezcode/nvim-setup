@@ -17,3 +17,18 @@ opt.wrap = false
 opt.ignorecase = true
 opt.smartcase = true
 
+--cursor line
+opt.cursorline = true
+
+
+--backspace
+opt.backspace = "indent,eol,start"
+
+--clipboard
+opt.clipboard:append("unnamedplus")
+
+--split windows
+opt.splitright = true
+opt.splitbelow = true
+
+opt.iskeyword:append("-")
