@@ -20,6 +20,8 @@ return require('packer').startup(function(use)
     end
   })
   
+  use('tpope/vim-rhubarb')
+  use('tpope/vim-sleuth')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
