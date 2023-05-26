@@ -19,7 +19,16 @@ return require('packer').startup(function(use)
         vim.cmd('colorscheme rose-pine')
     end
   })
-  
+
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons', -- optional
+    },
+    config = function()
+      require("nvim-tree").setup {}
+    end
+  }
   use('tpope/vim-rhubarb')
   use('tpope/vim-sleuth')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
