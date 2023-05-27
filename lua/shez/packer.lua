@@ -19,7 +19,7 @@ return require('packer').startup(function(use)
         vim.cmd('colorscheme rose-pine')
     end
   })
-
+  use ('mattn/emmet-vim')
   use {
     'nvim-tree/nvim-tree.lua',
     requires = {
