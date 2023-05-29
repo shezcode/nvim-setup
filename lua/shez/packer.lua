@@ -7,16 +7,19 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  use 'windwp/nvim-autopairs'
+  use 'windwp/nvim-ts-autotag'
+
   use {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     -- or                            , branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
   use ({
-    'rose-pine/neovim',
-    as = 'rose-pine',
+    'catppuccin/nvim',
+    as = 'catppuccin',
     config = function()
-        vim.cmd('colorscheme rose-pine')
+        vim.cmd('colorscheme catppuccin')
     end
   })
   use ('mattn/emmet-vim')
@@ -29,6 +32,9 @@ return require('packer').startup(function(use)
       require("nvim-tree").setup {}
     end
   }
+
+  use('rafamadriz/friendly-snippets')
+  use('saadparwaiz1/cmp_luasnip')
   use('tpope/vim-rhubarb')
   use('tpope/vim-sleuth')
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
