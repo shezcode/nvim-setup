@@ -52,4 +52,6 @@ return require('packer').startup(function(use)
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
   }
+  use('jose-elias-alvarez/null-ls.nvim')
+  use('MunifTanjim/prettier.nvim')
 end)
