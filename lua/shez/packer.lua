@@ -33,6 +33,27 @@ return require('packer').startup(function(use)
     end
   }
 
+  use {
+    'VonHeikemen/lsp-zero.nvim',
+    branch = 'v2.x',
+    requires = {
+      -- LSP Support
+      { 'neovim/nvim-lspconfig' }, -- Required
+      {
+                               -- Optional
+        'williamboman/mason.nvim',
+        run = function()
+          pcall(vim.cmd, 'MasonUpdate')
+        end,
+      },
+      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+
+      -- Autocompletion
+      { 'hrsh7th/nvim-cmp' }, -- Required
+      { 'hrsh7th/cmp-nvim-lsp' }, -- Required
+      { 'L3MON4D3/LuaSnip' }, -- Required
+    }
+  }
   use('rafamadriz/friendly-snippets')
   use('saadparwaiz1/cmp_luasnip')
   use('tpope/vim-rhubarb')
@@ -42,17 +63,7 @@ return require('packer').startup(function(use)
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
   use('tpope/vim-fugitive')
-  use('neovim/nvim-lspconfig') -- LSP
-  use('onsails/lspkind-nvim')  --vscode pictograms
-  use('hrsh7th/cmp-buffer')    -- nvim-cmp source for buffer words
-  use('hrsh7th/cmp-nvim-lsp')  --nvim-cmp source for nvim's builtin LSP
-  use('hrsh7th/nvim-cmp')      --completion
-  use('L3MON4D3/LuaSnip')
-  use {
-    "williamboman/mason.nvim",
-    "williamboman/mason-lspconfig.nvim",
-  }
-  use('jose-elias-alvarez/null-ls.nvim')
+  use('onsails/lspkind-nvim') --vscode pictograms
   use('MunifTanjim/prettier.nvim')
   use('folke/zen-mode.nvim')
 end)
