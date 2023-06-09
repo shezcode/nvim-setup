@@ -15,6 +15,8 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
+  --THEMES
+
   use('folke/tokyonight.nvim')
   use({
     'catppuccin/nvim',
@@ -23,6 +25,8 @@ return require('packer').startup(function(use)
       vim.cmd('colorscheme catppuccin')
     end
   })
+  use('lunarvim/Onedarker.nvim')
+  --
   use('mattn/emmet-vim')
   use {
     'nvim-tree/nvim-tree.lua',
@@ -67,4 +71,8 @@ return require('packer').startup(function(use)
   use('onsails/lspkind-nvim') --vscode pictograms
   use('MunifTanjim/prettier.nvim')
   use('folke/zen-mode.nvim')
+  use {
+    'nvim-lualine/lualine.nvim',
+    requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+  }
 end)
