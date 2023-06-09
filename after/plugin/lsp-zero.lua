@@ -5,3 +5,5 @@ lsp.on_attach(function(client, bufnr)
 end)
 
 lsp.setup()
+
+require('luasnip.loaders.from_vscode').lazy_load()
