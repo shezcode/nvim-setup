@@ -77,4 +77,30 @@ return require('packer').startup(function(use)
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
   }
+  use({
+    "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup({
+        api_key_cmd = "echo $OPENAI_API_KEY"
+      })
+    end,
+    requires = {
+      "MunifTanjim/nui.nvim",
+      "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope.nvim"
+    }
+  })
+
+  use {
+    'wthollingsworth/pomodoro.nvim',
+    requires = 'MunifTanjim/nui.nvim',
+    config = function()
+      require('pomodoro').setup({
+        time_work = 25,
+        time_break_short = 5,
+        time_break_long = 20,
+        timers_to_long_break = 4
+      })
+    end
+  }
 end)
