@@ -79,6 +79,17 @@ nvim_lsp.tsserver.setup {
     capabilities = capabilities
 }
 
+nvim_lsp.cssls.setup {
+    settings = {
+        css = {
+            validate = true,
+            lint = {
+                unknownAtRules = "ignore"
+            }
+        }
+    }
+}
+
 nvim_lsp.sourcekit.setup {
     on_attach = on_attach,
     capabilities = capabilities,

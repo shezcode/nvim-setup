@@ -103,4 +103,5 @@ return require('packer').startup(function(use)
       })
     end
   }
+  use('vimwiki/vimwiki')
 end)
