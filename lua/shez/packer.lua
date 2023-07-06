@@ -81,7 +81,7 @@ return require('packer').startup(function(use)
     "jackMort/ChatGPT.nvim",
     config = function()
       require("chatgpt").setup({
-        api_key_cmd = "echo $OPENAI_API_KEY"
+        api_key_cmd = "pass show chatGPT/nvim-key"
       })
     end,
     requires = {
@@ -91,6 +91,7 @@ return require('packer').startup(function(use)
     }
   })
 
+  use('github/copilot.vim')
   use {
     'wthollingsworth/pomodoro.nvim',
     requires = 'MunifTanjim/nui.nvim',
