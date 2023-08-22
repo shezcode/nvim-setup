@@ -66,10 +66,20 @@ protocol.CompletionItemKind = {
 
 -- Set up completion using nvim_cmp with LSP source
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
+local util = require('lspconfig/util')
+
 
 nvim_lsp.flow.setup {
     on_attach = on_attach,
     capabilities = capabilities
+}
+
+nvim_lsp.gopls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    cmd = { "gopls" },
+    filetypes = { "go", "gomod", "gowork", "gotmpl" },
+    root_dir = util.root_pattern("go.mod", ".git", "go.work"),
 }
 
 nvim_lsp.tsserver.setup {
