@@ -74,6 +74,13 @@ nvim_lsp.flow.setup {
     capabilities = capabilities
 }
 
+nvim_lsp.jdtls.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    filetypes = { "java" },
+    cmd = { "jdtls" },
+}
+
 nvim_lsp.gopls.setup {
     on_attach = on_attach,
     capabilities = capabilities,
