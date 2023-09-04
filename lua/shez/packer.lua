@@ -15,8 +15,10 @@ return require('packer').startup(function(use)
     -- or                            , branch = '0.1.x',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
-  --THEMES
 
+  use('neoclide/coc.nvim', { branch = 'release' })
+
+  --THEMES
   use('folke/tokyonight.nvim')
   use({
     'catppuccin/nvim',
@@ -90,6 +92,8 @@ return require('packer').startup(function(use)
       "nvim-telescope/telescope.nvim"
     }
   })
+
+  use('mfussenegger/nvim-jdtls')
 
   use('github/copilot.vim')
   use {
