@@ -79,6 +79,7 @@ nvim_lsp.jdtls.setup {
     capabilities = capabilities,
     filetypes = { "java" },
     cmd = { "jdtls" },
+    root_dir = util.root_pattern("gradlew", ".git", "mvnw"),
 }
 
 nvim_lsp.gopls.setup {
