@@ -40,6 +40,8 @@ return require('packer').startup(function(use)
     end
   }
 
+  use('xiyaowong/transparent.nvim')
+
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
