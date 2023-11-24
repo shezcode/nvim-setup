@@ -40,8 +40,6 @@ return require('packer').startup(function(use)
     end
   }
 
-  use('xiyaowong/transparent.nvim')
-
   use {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v2.x',
@@ -55,7 +53,7 @@ return require('packer').startup(function(use)
           pcall(vim.cmd, 'MasonUpdate')
         end,
       },
-      { 'williamboman/mason-lspconfig.nvim' }, -- Optional
+      -- { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
       { 'hrsh7th/nvim-cmp' },     -- Required
@@ -80,35 +78,6 @@ return require('packer').startup(function(use)
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
-  }
-  use({
-    "jackMort/ChatGPT.nvim",
-    config = function()
-      require("chatgpt").setup({
-        api_key_cmd = "pass show chatGPT/nvim-key",
-      })
-    end,
-    requires = {
-      "MunifTanjim/nui.nvim",
-      "nvim-lua/plenary.nvim",
-      "nvim-telescope/telescope.nvim"
-    }
-  })
-
-  use('mfussenegger/nvim-jdtls')
-
-  use('github/copilot.vim')
-  use {
-    'wthollingsworth/pomodoro.nvim',
-    requires = 'MunifTanjim/nui.nvim',
-    config = function()
-      require('pomodoro').setup({
-        time_work = 25,
-        time_break_short = 5,
-        time_break_long = 20,
-        timers_to_long_break = 4
-      })
-    end
   }
   use { 'vimwiki/vimwiki',
     config = function()

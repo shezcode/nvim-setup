@@ -31,6 +31,7 @@ vim.opt.path:append { '**' } -- Finding files - Search down into subfolders
 vim.opt.wildignore:append { '*/node_modules/*' }
 vim.opt.relativenumber = true
 vim.opt.nu = true
+vim.opt.guicursor = ""
 
 -- Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
