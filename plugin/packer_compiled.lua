@@ -130,6 +130,11 @@ _G.packer_plugins = {
     path = "/home/shez/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/shez/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
   ["mason.nvim"] = {
     loaded = true,
     path = "/home/shez/.local/share/nvim/site/pack/packer/start/mason.nvim",
@@ -226,11 +231,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/shez/.local/share/nvim/site/pack/packer/start/vimwiki",
     url = "https://github.com/vimwiki/vimwiki"
-  },
-  ["zen-mode.nvim"] = {
-    loaded = true,
-    path = "/home/shez/.local/share/nvim/site/pack/packer/start/zen-mode.nvim",
-    url = "https://github.com/folke/zen-mode.nvim"
   }
 }
 

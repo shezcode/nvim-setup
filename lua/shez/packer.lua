@@ -63,6 +63,13 @@ return require('packer').startup(function(use)
       }, -- Required
     }
   }
+
+  use {
+    "williamboman/mason.nvim",
+    "williamboman/mason-lspconfig.nvim",
+    "neovim/nvim-lspconfig",
+  }
+
   use('rafamadriz/friendly-snippets')
   use('saadparwaiz1/cmp_luasnip')
   use('tpope/vim-rhubarb')
@@ -74,7 +81,6 @@ return require('packer').startup(function(use)
   use('tpope/vim-fugitive')
   use('onsails/lspkind-nvim') --vscode pictograms
   use('MunifTanjim/prettier.nvim')
-  use('folke/zen-mode.nvim')
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'nvim-tree/nvim-web-devicons', opt = true }
