@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/adrian/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?.lua;/Users/adrian/.cache/nvim/packer_hererocks/2.1.1696795921/share/lua/5.1/?/init.lua;/Users/adrian/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?.lua;/Users/adrian/.cache/nvim/packer_hererocks/2.1.1696795921/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/adrian/.cache/nvim/packer_hererocks/2.1.1696795921/lib/lua/5.1/?.so"
+local package_path_str = "/Users/adrian/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?.lua;/Users/adrian/.cache/nvim/packer_hererocks/2.1.1703358377/share/lua/5.1/?/init.lua;/Users/adrian/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?.lua;/Users/adrian/.cache/nvim/packer_hererocks/2.1.1703358377/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/adrian/.cache/nvim/packer_hererocks/2.1.1703358377/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -213,7 +213,7 @@ _G.packer_plugins = {
     url = "https://github.com/nvim-lua/plenary.nvim"
   },
   ["pomodoro.nvim"] = {
-    config = { "\27LJ\2\n…\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\21time_break_short\3\5\20time_break_long\3\20\25timers_to_long_break\3\4\14time_work\3\25\nsetup\rpomodoro\frequire\0" },
+    config = { "\27LJ\2\n…\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\25timers_to_long_break\3\4\14time_work\3\25\21time_break_short\3\5\20time_break_long\3\20\nsetup\rpomodoro\frequire\0" },
     loaded = true,
     path = "/Users/adrian/.local/share/nvim/site/pack/packer/start/pomodoro.nvim",
     url = "https://github.com/wthollingsworth/pomodoro.nvim"
@@ -259,7 +259,7 @@ _G.packer_plugins = {
     url = "https://github.com/tpope/vim-sleuth"
   },
   vimwiki = {
-    config = { "\27LJ\2\n¶\1\0\0\3\0\6\0\v6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0006\0\0\0009\0\1\0005\1\5\0=\1\4\0K\0\1\0\1\0\3\v.mdown\rmarkdown\14.markdown\rmarkdown\b.md\rmarkdown\23vimwiki_ext2syntax\1\0\3\vsyntax\rmarkdown\bext\b.md\tpath\14~/vimwiki\17vimwiki_list\6g\bvim\0" },
+    config = { "\27LJ\2\n¶\1\0\0\3\0\6\0\v6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0006\0\0\0009\0\1\0005\1\5\0=\1\4\0K\0\1\0\1\0\3\v.mdown\rmarkdown\14.markdown\rmarkdown\b.md\rmarkdown\23vimwiki_ext2syntax\1\0\3\tpath\14~/vimwiki\bext\b.md\vsyntax\rmarkdown\17vimwiki_list\6g\bvim\0" },
     loaded = true,
     path = "/Users/adrian/.local/share/nvim/site/pack/packer/start/vimwiki",
     url = "https://github.com/vimwiki/vimwiki"
@@ -272,18 +272,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
--- Config for: catppuccin
-time([[Config for catppuccin]], true)
-try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\0", "config", "catppuccin")
-time([[Config for catppuccin]], false)
 -- Config for: pomodoro.nvim
 time([[Config for pomodoro.nvim]], true)
-try_loadstring("\27LJ\2\n…\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\21time_break_short\3\5\20time_break_long\3\20\25timers_to_long_break\3\4\14time_work\3\25\nsetup\rpomodoro\frequire\0", "config", "pomodoro.nvim")
+try_loadstring("\27LJ\2\n…\1\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\4\25timers_to_long_break\3\4\14time_work\3\25\21time_break_short\3\5\20time_break_long\3\20\nsetup\rpomodoro\frequire\0", "config", "pomodoro.nvim")
 time([[Config for pomodoro.nvim]], false)
--- Config for: vimwiki
-time([[Config for vimwiki]], true)
-try_loadstring("\27LJ\2\n¶\1\0\0\3\0\6\0\v6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0006\0\0\0009\0\1\0005\1\5\0=\1\4\0K\0\1\0\1\0\3\v.mdown\rmarkdown\14.markdown\rmarkdown\b.md\rmarkdown\23vimwiki_ext2syntax\1\0\3\vsyntax\rmarkdown\bext\b.md\tpath\14~/vimwiki\17vimwiki_list\6g\bvim\0", "config", "vimwiki")
-time([[Config for vimwiki]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
@@ -292,6 +284,14 @@ time([[Config for nvim-tree.lua]], false)
 time([[Config for ChatGPT.nvim]], true)
 try_loadstring("\27LJ\2\nc\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\16api_key_cmd\31pass show chatGPT/nvim-key\nsetup\fchatgpt\frequire\0", "config", "ChatGPT.nvim")
 time([[Config for ChatGPT.nvim]], false)
+-- Config for: vimwiki
+time([[Config for vimwiki]], true)
+try_loadstring("\27LJ\2\n¶\1\0\0\3\0\6\0\v6\0\0\0009\0\1\0004\1\3\0005\2\3\0>\2\1\1=\1\2\0006\0\0\0009\0\1\0005\1\5\0=\1\4\0K\0\1\0\1\0\3\v.mdown\rmarkdown\14.markdown\rmarkdown\b.md\rmarkdown\23vimwiki_ext2syntax\1\0\3\tpath\14~/vimwiki\bext\b.md\vsyntax\rmarkdown\17vimwiki_list\6g\bvim\0", "config", "vimwiki")
+time([[Config for vimwiki]], false)
+-- Config for: catppuccin
+time([[Config for catppuccin]], true)
+try_loadstring("\27LJ\2\n:\0\0\3\0\3\0\0056\0\0\0009\0\1\0'\2\2\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\0", "config", "catppuccin")
+time([[Config for catppuccin]], false)
 
 _G._packer.inside_compile = false
 if _G._packer.needs_bufread == true then
