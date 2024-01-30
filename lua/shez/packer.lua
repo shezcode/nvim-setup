@@ -18,16 +18,19 @@ return require('packer').startup(function(use)
 
   --  use('neoclide/coc.nvim', { branch = 'release' })
 
+  use('theprimeagen/vim-be-good')
+
   --THEMES
   use('folke/tokyonight.nvim')
   use({
     'catppuccin/nvim',
     as = 'catppuccin',
-    config = function()
-      vim.cmd('colorscheme catppuccin')
-    end
   })
   use('lunarvim/Onedarker.nvim')
+  use({
+    'rose-pine/nvim',
+    as = 'rose-pine'
+  })
   --
   use('mattn/emmet-vim')
   use {
